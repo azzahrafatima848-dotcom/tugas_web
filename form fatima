@@ -1,0 +1,160 @@
+<?php
+$judul = "FORM BIODATA";
+$nama_default = "Fatima";
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><?php echo $judul; ?></title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#bbf7d0,#22c55e);
+    padding:20px;
+}
+
+/* Card */
+.card{
+    width:100%;
+    max-width:360px;
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:28px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    color:#065f46;
+    animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.card h2{
+    text-align:center;
+    font-weight:600;
+    font-size:22px;
+    margin-bottom:20px;
+    color:#065f46;
+}
+
+/* Input */
+.input-group{
+    margin-bottom:16px;
+}
+
+.input-group label{
+    font-size:13px;
+    opacity:0.9;
+    display:flex;
+    align-items:center;
+}
+
+.input-group label span{
+    margin-right:6px;
+    font-size:16px;
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+    margin-top:6px;
+    padding:10px 12px;
+    border:none;
+    border-radius:15px;
+    font-size:13px;
+    outline:none;
+    transition:0.3s;
+    background:rgba(255,255,255,0.3);
+    color:#065f46;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+    color:rgba(6,95,70,0.7);
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    box-shadow:0 0 10px rgba(6,95,70,0.8);
+    transform:scale(1.02);
+}
+
+textarea{
+    resize:none;
+}
+
+/* Button */
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(90deg,#22c55e,#16a34a);
+    color:white;
+    font-size:14px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media(max-width:420px){
+    .card{
+        width:90%;
+        padding:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2><?php echo $judul; ?></h2>
+
+    <form method="POST">
+
+        <div class="input-group">
+            <label><span>👤</span> Nama Lengkap</label>
+            <input type="text" name="nama" value="<?php echo $nama_default; ?>" placeholder="Masukkan nama">
+        </div>
+
+        <div class="input-group">
+            <label><span>📧</span> Email</label>
+            <input type="email" name="email" placeholder="Masukkan email">
+        </div>
+
+        <div class="input-group">
+            <label><span>🎯</span> Hobi</label>
+            <input type="text" name="hobi" placeholder="Masukkan hobi">
+        </div>
+
+        <button type="submit" class="btn">💾 Simpan</button>
+
+    </form>
+</div>
+
+</body>
+</html>
