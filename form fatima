@@ -1,14 +1,9 @@
-<?php
-$judul = "FORM BIODATA";
-$nama_default = "Fatima";
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?php echo $judul; ?></title>
+<title>FORM BIODATA</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -132,13 +127,13 @@ textarea{
 <body>
 
 <div class="card">
-    <h2><?php echo $judul; ?></h2>
+    <h2>FORM BIODATA</h2>
 
-    <form method="POST">
+    <form>
 
         <div class="input-group">
             <label><span>👤</span> Nama Lengkap</label>
-            <input type="text" name="nama" value="<?php echo $nama_default; ?>" placeholder="Masukkan nama">
+            <input type="text" name="nama" value="Fatima" placeholder="Masukkan nama">
         </div>
 
         <div class="input-group">
